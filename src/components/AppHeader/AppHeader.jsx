@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import Collapse from 'react-bootstrap/Collapse';
 import clsx from 'clsx';
-import { Collapse } from 'bootstrap';
 
 const AppHeader = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [open, setOpen] = useState(false);
 
   const hideTopMenu = function(event) {
     let currentScrollY = window.scrollY;
@@ -19,18 +20,13 @@ const AppHeader = () => {
     setLastScrollY(currentScrollY);
   };
 
-  const collapseMenu = function() {
-    const navbar = document.getElementById('navbar');
-    new Collapse(navbar).hide();
-  };
-
   useEffect(() => {
     window.addEventListener('scroll', hideTopMenu);
   });
 
   useEffect(() => {
     document.querySelectorAll('.menu-collapser').forEach((linkElement) => {
-      linkElement.addEventListener('click', collapseMenu)
+      linkElement.addEventListener('click', () => { setOpen(false) });
     });
   });
 
@@ -40,31 +36,48 @@ const AppHeader = () => {
         hidden: !isVisible
       })}>
         <div className="container">
-          <Link to="/" className="navbar-brand menu-collapser">
-            Ro.manic
-          </Link>
-          <button className="btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="hamburger-icon"></span>
+          <NavLink to="/" className="navbar-brand menu-collapser">
+            Manic
+          </NavLink>
+          <button className="btn navbar-toggler" onClick={() => setOpen(!open)} type="button" aria-controls="navbar" aria-expanded={open}>
+            <span className="hamburger-icon"></span>
           </button>
-          <div className="navbar-collapse collapse hamburger-menu" id='navbar'>
-            <ul className="navbar-nav">
-              <li className='nav-item'>
-                <Link to="/" className="nav-link menu-collapser">
-                  O mnie
-                </Link>
-              </li>
-              <li className='nav-item'>
-                <Link to="/services" className="nav-link menu-collapser">
-                  Uslugi
-                </Link>
-              </li>
-              <li className='nav-item'>
-                <Link to="/courses" className="nav-link menu-collapser">
-                  Szkolenia
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <Collapse in={open}>
+            <div className="navbar-collapse hamburger-menu" id='navbar'>
+              <ul className="navbar-nav">
+                <li className='nav-item'>
+                  <NavLink to="/"
+                           className={({ isActive }) => clsx("nav-link menu-collapser", {
+                                                                 active: isActive,
+                                                                 underline: isActive
+                                                               })} 
+                  >
+                    O mnie
+                  </NavLink>
+                </li>
+                <li className='nav-item'>
+                  <NavLink to="/services"
+                           className={({ isActive }) => clsx("nav-link menu-collapser", {
+                                                                 active: isActive,
+                                                                 underline: isActive
+                                                               })} 
+                  >
+                    Uslugi
+                  </NavLink>
+                </li>
+                <li className='nav-item'>
+                  <NavLink to="/courses"
+                           className={({ isActive }) => clsx("nav-link menu-collapser", {
+                                                                 active: isActive,
+                                                                 underline: isActive
+                                                               })} 
+                  >
+                    Szkolenia
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          </Collapse>
         </div>
       </nav>
     </header>
