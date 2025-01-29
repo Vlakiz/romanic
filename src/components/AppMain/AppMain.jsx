@@ -6,11 +6,13 @@ import CoursesPage from '../CoursesPage/CoursesPage';
 
 const AppMain = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Homepage/>} />
-      <Route path="/services" element={<ServicesPage/>} />
-      <Route path="/courses" element={<CoursesPage/>} />
-    </Routes>
+    <main>
+      <Routes>
+        <Route path="/" element={<Homepage/>} />
+        <Route path="/services" element={<ServicesPage/>} />
+        <Route path="/courses" element={<CoursesPage/>} />
+      </Routes>
+    </main>
   );
 };
 

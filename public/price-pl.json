@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Manicure Classic",
+        "price": 60
+    },
+    {
+        "name": "Manicure Hybrydowy",
+        "price": 140
+    },
+    {
+        "name": "Cower Base",
+        "price": 130
+    },
+    {
+        "name": "DOPEŁNIENIE ŻEL / AKRYLOŻEL",
+        "price": 170
+    },
+    {
+        "name": "Przedłużanie paznokci 1-2 długość",
+        "price": 200
+    },
+    {
+        "name": "Przedłużanie paznokci 3-4 długość",
+        "price": 220
+    },
+    {
+        "name": "Dopełnienie + podnoszenie paznokci rosnących w dół",
+        "price": 200,
+        "additions": [
+            {
+                "name": "Ściągnięcie z innego",
+                "price": 20
+            }
+        ]
+    },
+    {
+        "name": "Stylizacja / French",
+        "price": 20
+    },
+    {
+        "name": "Zdobienie małe",
+        "price": 10
+    },
+    {
+        "name": "Zdobienie duże",
+        "price": 20
+    },
+    {
+        "name": "Ściągnięcie + Manicure Klasyczny",
+        "price": 80
+    },
+    {
+        "name": "Ściągnięcie",
+        "price": 40
+    },
+    {
+        "name": "Naprawa Paznokcia",
+        "price": 10
+    },
+    {
+        "name": "Pedicure Klasyczny",
+        "price": 150
+    },
+    {
+        "name": "Pedicure Hybrydowy",
+        "price": 170
+    }
+]

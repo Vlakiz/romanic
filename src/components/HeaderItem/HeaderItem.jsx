@@ -9,7 +9,7 @@ const HeaderItem = ({ itemName, itemRef }) => {
   return (
     <li className='nav-item mx-lg-5'>
       <NavLink to={itemRef}
-              className={({ isActive }) => clsx("nav-link menu-collapser text-uppercase fw-normal", {
+              className={({ isActive }) => clsx("nav-link menu-collapser text-uppercase text-center py-3", {
                 active: isActive,
                 underline: isActive
               })} 

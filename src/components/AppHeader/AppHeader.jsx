@@ -51,7 +51,7 @@ const AppHeader = () => {
         data-bs-theme='dark'
       >
         <div className="container">
-          <NavLink to="/" className="navbar-brand menu-collapser">
+          <NavLink to="/" className="navbar-brand menu-collapser py-4 ps-2">
             RO Manic
           </NavLink>
           <button className="btn navbar-toggler" onClick={() => setOpen(!open)} type="button" aria-controls="navbar" aria-expanded={open}>
@@ -64,11 +64,19 @@ const AppHeader = () => {
                   <HeaderItem itemName='about' itemRef='/' />
                   <HeaderItem itemName='services' itemRef='/services' />
                   <HeaderItem itemName='courses' itemRef='/courses' />
-                  <li className='nav-item d-lg-none mt-3 pt-3 border-top fw-semibold mobile-language text-body-tertiary'>
+                  <li className='nav-item d-lg-none mt-2 pt-4 border-top fw-semibold mobile-language text-body-tertiary'>
                     <Globe2 />  
-                    <span onClick={(e) => changeLanguage(e, 'pl')}>PL</span>
+                    <span 
+                      onClick={(e) => changeLanguage(e, 'pl')}
+                      className={clsx({ 'text-white': i18n.language === 'pl' })}
+                      role="button"
+                    >PL</span>
                       |  
-                    <span onClick={(e) => changeLanguage(e, 'ru')}>RU</span>
+                    <span
+                      onClick={(e) => changeLanguage(e, 'ru')}
+                      className={clsx({ 'text-white': i18n.language === 'ru' })}
+                      role="button"
+                    >RU</span>
                   </li>
                 </ul>
               </div>
