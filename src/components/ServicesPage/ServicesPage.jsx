@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from "react-i18next";
+import OfferList from '../OfferList/OfferList';
 
 const ServicesPage = () => {
   const { i18n } = useTranslation('header');
@@ -33,17 +34,7 @@ const ServicesPage = () => {
             Price
           </div>
         </div>
-        {priceData && priceData.map((item) => (<div class="price-item row text-uppercase py-3 mx-lg-5 px-lg-5">
-            <div className='col-9'>{item.name}</div>
-            <div className='col-3 d-flex align-self-center justify-content-end'>{item.price} zł</div>
-            {item.additions && item.additions.map((additionItem) => (
-              <div class="addition-item row pt-2">
-                <div className="ps-5 col-6">{additionItem.name}</div>
-                <div className="col-6 d-flex align-self-center justify-content-end">+ {additionItem.price} zł</div>
-              </div>
-            ))}
-          </div>)
-          )}
+        <OfferList priceData={priceData} error={error} loading={loading}/>
       </div>
     </div>
   );
