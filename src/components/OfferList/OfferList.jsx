@@ -23,9 +23,9 @@ const OfferList = ({ priceData, loading, error }) => {
     );
   } else {
     return (
-      <>
-        {priceData && priceData.map((item) => <Offer item={item} />)}
-      </>
+      <div className='border-bottom mb-3'>
+        {priceData && priceData.map((item, i) => <Offer item={item} key={i}/>)}
+      </div>
     );
   }
 };

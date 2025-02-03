@@ -3,6 +3,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './styles/main.scss';
 import './styles/header/top-menu.scss'
 import './styles/services/price-list.scss'
+import './styles/footer.scss'
 import './i18n';
 
 import React from 'react';

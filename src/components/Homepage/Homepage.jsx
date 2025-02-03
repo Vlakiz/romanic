@@ -7,7 +7,7 @@ const Homepage = () => {
     <>
       {t('home')}
 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro culpa natus in quis eos officiis esse quo aliquid, enim aut voluptate. Omnis vel at nihil ex nobis enim eaque a.
+      Lorem ipssssum dolor sit amet consectetur adipisicing elit. Porro culpa natus in quis eos officiis esse quo aliquid, enim aut voluptate. Omnis vel at nihil ex nobis enim eaque a.
       Minus adipisci illum officia, doloribus aspernatur quasi quidem dolorum. Inventore mollitia, rem ipsam nostrum deleniti enim, quibusdam, qui assumenda exercitationem minus aspernatur iste. Incidunt in voluptatem labore eos sit ut.
       Suscipit nemo pariatur in maxime. Necessitatibus eligendi vitae praesentium repudiandae reiciendis aliquid distinctio deleniti omnis quisquam dolore mollitia, ipsa tempora vel officiis minus, ullam iure assumenda eum hic dicta ad!
       Laboriosam, porro? Perspiciatis totam, nostrum doloremque illo recusandae, molestias fugiat minus voluptas reiciendis animi sit iusto. Assumenda, consequuntur! Id voluptates libero fuga possimus nulla voluptas rerum pariatur beatae distinctio delectus?

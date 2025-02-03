@@ -1,0 +1,10 @@
+{
+    "location": "Адрес",
+    "openHours": "Время работы",
+    "contacts": "Контакты",
+    "workingDays": "Ср.-Пятн.",
+    "saturday": "Суббота",
+    "nonworkingDays": "Воскр.-Вт.",
+    "closed": "Закрыто",
+    "book": "Записаться"
+}

@@ -28,9 +28,9 @@ const ServicesPage = () => {
 
   return (
     <div id="services-page" className='mb-3'>
-      <div id="price-list" className='mx-1 mx-lg-5 px-lg-5 my-2'>
-        <div className="row mb-3 text-uppercase fw-bold fs-2 mb-lg-5">
-          <div className="col-12 text-center border-bottom">
+      <div id="price-list" className='mx-0 mx-lg-5 px-lg-5 my-4 rounded-2 shadow-sm py-4'>
+        <div className="mb-5 text-uppercase fw-bold fs-2">
+          <div className="text-center py-4 border-bottom">
             Price
           </div>
         </div>
