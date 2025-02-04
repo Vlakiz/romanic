@@ -22,14 +22,16 @@ footer {
                 color: $brand-header-color;
                 background: linear-gradient(
                     135deg,
-                    #e4e4e4 30%,
-                    #c4c3c3 50%,
+                    #ecebeb 30%,
+                    #dad9d9 50%,
                     #f3f3f3 70%,
                 );
                 border: none;
+                background-size: 100% 100%;
 
                 &:hover {
                     transform: scale(105%);
+                    background-size: 150% 150%;
                 }
             }
         }

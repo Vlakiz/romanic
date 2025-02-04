@@ -51,8 +51,8 @@ const AppHeader = () => {
         data-bs-theme='dark'
       >
         <div className="container">
-          <NavLink to="/" className="navbar-brand menu-collapser py-4 ps-2">
-            RO Manic
+          <NavLink to="/" className="navbar-brand menu-collapser ps-3 py-2">
+            <img src="/brand-logo.png" alt="Ro Manic" height="80px"/>
           </NavLink>
           <button className="btn navbar-toggler" onClick={() => setOpen(!open)} type="button" aria-controls="navbar" aria-expanded={open}>
             <span className="hamburger-icon"></span>

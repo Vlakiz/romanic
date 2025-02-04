@@ -28,7 +28,7 @@ const ServicesPage = () => {
   }, [i18n.language])
 
   return (
-    <div id="services-page" className='mb-3'>
+    <div id="services-page" className='pt-3 mb-3'>
       <div id="price-list" className='mx-0 mx-lg-5 px-lg-5 my-4 rounded-2 shadow-sm py-4'>
         <div className="mb-5 text-uppercase fw-bold fs-2">
           <h2 className="text-center py-4 border-bottom">
