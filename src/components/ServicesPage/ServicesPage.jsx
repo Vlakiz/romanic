@@ -12,6 +12,7 @@ const ServicesPage = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(`/price-${i18n.language}.json`);
+        // await new Promise((resolve) => setTimeout(resolve, 1500));
         if (!response.ok) {
           throw new Error("Error loading data");
         }
@@ -30,9 +31,9 @@ const ServicesPage = () => {
     <div id="services-page" className='mb-3'>
       <div id="price-list" className='mx-0 mx-lg-5 px-lg-5 my-4 rounded-2 shadow-sm py-4'>
         <div className="mb-5 text-uppercase fw-bold fs-2">
-          <div className="text-center py-4 border-bottom">
-            Price
-          </div>
+          <h2 className="text-center py-4 border-bottom">
+            P r i c e
+          </h2>
         </div>
         <OfferList priceData={priceData} error={error} loading={loading}/>
       </div>

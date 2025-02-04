@@ -23,7 +23,7 @@ const OfferList = ({ priceData, loading, error }) => {
     );
   } else {
     return (
-      <div className='border-bottom mb-3'>
+      <div className='mb-0 mb-lg-3'>
         {priceData && priceData.map((item, i) => <Offer item={item} key={i}/>)}
       </div>
     );

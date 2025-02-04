@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Instagram, Facebook, Tiktok, Youtube, Telephone, Envelope, Calendar } from 'react-bootstrap-icons';
-import Button from 'react-bootstrap/Button';
+import { Instagram, Facebook, Tiktok, Youtube, Telephone, Envelope } from 'react-bootstrap-icons';
+import BookBlock from '../BookBlock/BookBlock';
 
 const AppFooter = () => {
   const { t } = useTranslation('footer');
@@ -43,7 +43,7 @@ const AppFooter = () => {
                 </div>
               </div>
             </div>
-            <div className="col-12 col-sm-6 col-lg-4 offset-md-1 offset-xl-2 mb-5 mb-lg-0">
+            <div className="col-12 col-sm-6 col-lg-4 offset-md-1 offset-xl-2 mb-4 mb-lg-0">
               <div className='footer-block px-3 px-md-0'>
                 <h5 className='text-uppercase fw-semibold'>
                   {t('location')}
@@ -72,15 +72,7 @@ const AppFooter = () => {
             </div>
             <div className="col-12 col-lg-3 px-3 px-md-0">
               <div className='footer-block text-center text-lg-end'>
-                <h5 className='text-uppercase fw-semibold mb-3'>
-                  {t('book')}
-                </h5>
-                <p>
-                  <Button variant="outline-dark text-uppercase fs-6 px-4 py-3" size="lg">
-                    <Calendar className='me-2'/>
-                    Booksy
-                  </Button>
-                </p>
+                <BookBlock/>
               </div>
             </div>
           </div>

@@ -2,10 +2,61 @@
 
 footer {
     #footer-wrapper {
-        .social-link {
+        .nav-link {
             &:hover {
                 color: #000;
             }
         }
+
+        .book-card {
+            min-width: 280px;
+            background-color: #525241;
+            color: #000;
+            text-shadow: 2px 1px 0 #6f701371;
+                        
+            #book-button {
+                transition: all 0.25s ease-in-out;
+                text-shadow: 2px 1px 0 #ececd9;
+                font-family: 'Courier New', Courier, monospace;
+
+                color: $brand-header-color;
+                background: linear-gradient(
+                    135deg,
+                    #e4e4e4 30%,
+                    #c4c3c3 50%,
+                    #f3f3f3 70%,
+                );
+                border: none;
+
+                &:hover {
+                    transform: scale(105%);
+                }
+            }
+        }
     }
 }
+
+.gradient-border {
+    --border-width: 1px;
+  
+    &::after {
+      position: absolute;
+      content: "";
+      top: calc(-1 * var(--border-width));
+      left: calc(-1 * var(--border-width));
+      z-index: -1;
+      width: calc(100% + var(--border-width) * 2);
+      height: calc(100% + var(--border-width) * 2);
+      background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+      background-size: 300% 300%;
+      background-position: 0 50%;
+      border-radius: 10px;
+      animation: moveGradient 20s alternate infinite;
+    }
+  }
+  
+  @keyframes moveGradient {
+    50% {
+      background-position: 100% 50%;
+    }
+  }
