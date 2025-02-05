@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import HeaderItem from "../HeaderItem/HeaderItem";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { Globe2 } from 'react-bootstrap-icons';
 import Collapse from 'react-bootstrap/Collapse';
 import Dropdown from 'react-bootstrap/Dropdown';
 import clsx from 'clsx';
+
+import HeaderItem from "./HeaderItem";
 
 const AppHeader = () => {
   const { i18n } = useTranslation('header');
@@ -43,7 +44,7 @@ const AppHeader = () => {
   });
 
   return (
-    <header>
+    <header className='container'>
       <nav
         className={clsx("navbar navbar-expand-lg fixed-top", {
           hidden: !isVisible
@@ -65,13 +66,13 @@ const AppHeader = () => {
                   <HeaderItem itemName='services' itemRef='/services' />
                   <HeaderItem itemName='courses' itemRef='/courses' />
                   <li className='nav-item d-lg-none mt-2 pt-4 border-top fw-semibold mobile-language text-body-tertiary'>
-                    <Globe2 />  
+                    <Globe2 className="me-2"/>
                     <span 
                       onClick={(e) => changeLanguage(e, 'pl')}
                       className={clsx({ 'text-white': i18n.language === 'pl' })}
                       role="button"
                     >PL</span>
-                      |  
+                    <span className="mx-2">|</span>
                     <span
                       onClick={(e) => changeLanguage(e, 'ru')}
                       className={clsx({ 'text-white': i18n.language === 'ru' })}
@@ -82,7 +83,7 @@ const AppHeader = () => {
               </div>
               <Dropdown className="nav-item">
                 <Dropdown.Toggle id="dropdown-basic" variant="none">
-                  <Globe2 />  
+                  <Globe2 className="me-2"/>
                   <span className='selected-language'>{i18n.language.toUpperCase()}</span>
                 </Dropdown.Toggle>
                 <Dropdown.Menu>

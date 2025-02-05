@@ -1,8 +1,9 @@
 import React from 'react';
-import Offer from '../Offer/Offer';
 import Spinner from 'react-bootstrap/Spinner';
 import Alert from 'react-bootstrap/Alert'
 import { useTranslation } from "react-i18next";
+
+import Offer from './Offer';
 
 const OfferList = ({ priceData, loading, error }) => {
   const { t } = useTranslation();

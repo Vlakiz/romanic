@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from "react-i18next";
-import OfferList from '../OfferList/OfferList';
+
+import OfferList from 'src/components/features/OfferList/OfferList';
 
 const ServicesPage = () => {
   const { i18n } = useTranslation('header');

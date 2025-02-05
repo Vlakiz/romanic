@@ -38,17 +38,15 @@ footer {
     }
 }
 
-.gradient-border {
-    --border-width: 1px;
-  
+.gold-card {
     &::after {
       position: absolute;
       content: "";
-      top: calc(-1 * var(--border-width));
-      left: calc(-1 * var(--border-width));
+      top: -1px;
+      left: -1px;
       z-index: -1;
-      width: calc(100% + var(--border-width) * 2);
-      height: calc(100% + var(--border-width) * 2);
+      width: 102%;
+      height: 102%;
       background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
       background-size: 300% 300%;
       background-position: 0 50%;

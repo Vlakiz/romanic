@@ -11,7 +11,7 @@ module.exports = function (plop) {
     actions: [
       {
         type: 'add',
-        path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.jsx',
+        path: 'src/components/{{pascalCase name}}.jsx',
         templateFile: 'plop-templates/component.hbs',
       }
     ],

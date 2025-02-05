@@ -1,12 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Homepage from '../Homepage/Homepage';
-import ServicesPage from '../ServicesPage/ServicesPage';
-import CoursesPage from '../CoursesPage/CoursesPage';
+
+import Homepage from 'src/pages/Homepage';
+import ServicesPage from 'src/pages/ServicesPage';
+import CoursesPage from 'src/pages/CoursesPage';
 
 const AppMain = () => {
   return (
-    <main>
+    <main className='container'>
       <Routes>
         <Route path="/" element={<Homepage/>} />
         <Route path="/services" element={<ServicesPage/>} />

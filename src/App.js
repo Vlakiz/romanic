@@ -1,18 +1,18 @@
-import AppHeader from './components/AppHeader/AppHeader';
-import AppMain from './components/AppMain/AppMain';
-import AppFooter from './components/AppFooter/AppFooter'
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import ScrollToTop from "./utils/scrollToTop";
+
+import AppHeader from 'src/components/layout/header/AppHeader';
+import AppMain from 'src/components/layout/AppMain';
+import AppFooter from 'src/components/layout/footer/AppFooter';
 
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="container">
-        <AppHeader/>
-        <AppMain/>
-        <AppFooter/>
-      </div>
+      <AppHeader/>
+      <AppMain/>
+      <AppFooter/>
     </BrowserRouter>
   );
 }

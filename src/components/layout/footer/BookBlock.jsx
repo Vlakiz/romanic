@@ -10,10 +10,11 @@ const BookBlock = () => {
   const { ref, inView } = useInView({ threshold: 0.1 });
 
   return (
-    <div ref={ref} className={clsx('book-card p-4 rounded-3 gradient-border shadow-sm mb-3 mb-lg-0 d-inline-block text-center opacity-0', {
-                     'appear-from-right': inView,
-                     'opacity-100': inView
-                   })}
+    <div ref={ref} className={clsx(`book-card p-4 rounded-3 shadow my-2 gold-card
+                                    my-lg-0 d-inline-block text-center`, {
+                                    'appear-from-right': inView,
+                                    'opacity-0': !inView
+                              })}
     >
       <h5 className='text-uppercase mb-3'>
         {t('book')}
