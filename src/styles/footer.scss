@@ -42,23 +42,23 @@ footer {
     position: relative;
 
     &::after {
-      position: absolute;
-      content: "";
-      top: -1px;
-      left: -1px;
-      z-index: -1;
-      width: 102%;
-      height: 102%;
-      background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-      background-size: 300% 300%;
-      background-position: 0 50%;
-      border-radius: 10px;
-      animation: moveGradient 20s alternate infinite;
+        position: absolute;
+        content: "";
+        top: -1px;
+        left: -1px;
+        z-index: -1;
+        width: 102%;
+        height: 102%;
+        background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+        background-size: 300% 300%;
+        background-position: 0 50%;
+        border-radius: 10px;
+        animation: moveGradient 20s alternate infinite;
     }
-  }
+}
   
-  @keyframes moveGradient {
+@keyframes moveGradient {
     50% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
     }
-  }
+}
