@@ -7,7 +7,7 @@ import CoursesPage from 'src/pages/CoursesPage';
 
 const AppMain = () => {
   return (
-    <main className='container'>
+    <main className='container px-0'>
       <Routes>
         <Route path="/" element={<Homepage/>} />
         <Route path="/services" element={<ServicesPage/>} />
